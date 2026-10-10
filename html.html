@@ -1,0 +1,92 @@
+<!--
+ * @Author: dengzewei
+ * @Date: 2024-07-29 10:26:48
+ * @LastEditors: dengzewei
+ * @LastEditTime: 2024-07-31 11:30:57
+ * @FilePath: /dso100-chrome-extension/html.html
+ * @Description: 
+ * 
+ * Copyright (c) 2024 by 抖查查, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./douyin/douyin.css">
+  <script src="./douyin/douyin.js"></script>
+  <style>
+    body{
+      margin: 10px 60px;
+      position: relative;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="douyin_alert_url">
+    <div class="douyin_alert_url_w">
+      <div class="douyin_alert_url_main">
+
+        <div class="douyin_alert_url_w_t">
+          <div>请输入抖音视频链接（单次最多支持转译100条</div>
+          <div class="del">x</div>
+        </div>
+        <div class="textarea">
+          <textarea  name="video-items" placeholder="请输入视频链接格式,单次最多100条&#10;格式如下:&#10;https://www.douyin.com/video/1111111111111111&#10;https://www.douyin.com/video/1111111111111111"></textarea>
+        </div>
+        <div class="douyin_alert_url_b">
+          <div>总数:</div>
+          <div>预计消耗次数:</div>
+          <div>剩余次数:</div>
+        </div>
+        <div class="douyin_alert_url_b2">
+          <div class="douyin_alert_url_b2_l">
+            <div class="div1"> 预计本次消耗2次，提取文案次数剩余499次</div>
+            <div>若次数不足，可 <span>充值次数</span> 进行提取</div>
+          </div>
+          <div class="btn">
+            <img class="img"  width="18px" height="18px" alt="" src="data:image/png;base64,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">
+            立即提取
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="douyin_alert_copyWriters">
+    <div class="douyin_alert_copyWriters_w">
+      <div class="douyin_alert_copyWriters_main">
+        <div class="douyin_alert_url_w_t">
+          <div></div>
+          <div class="copyWritersDel">x</div>
+        </div>
+        <div class="copyWritersTextarea">
+          <textarea  name="video-items" placeholder=""></textarea>
+        </div>
+        <div class="douyin_alert_copyWriters_b">
+          <div>复制文案</div>
+          <div>修改错别字</div>
+          <div>Ai改写</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 弹窗刷新 -->
+   <div class="douyin_alert_rotate_loading" id="rotateLoadingId">
+    <div class="douyin_alert_rotate_loading_w">
+      <div class="rotate-loading"></div>
+    </div>
+   </div>
+
+   <!-- 次数不足 -->
+    <div class="CountAllCount">
+      <div class="CountAllCount_main">
+        <div>您的文案提取次数已用完，请至 <span>会员购买</span> 进行升级。</div>
+      </div>
+    </div>
+</body>
+</html>

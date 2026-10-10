@@ -1,0 +1,462 @@
+/**
+ * 抖音平台特有样式
+ * 公共样式已抽离到 common.css
+ */
+
+/* ========== 头部菜单 ========== */
+.douyin {
+  width: 140px;
+  height: 44px;
+  height: var(--header-height);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  float: left;
+  cursor: pointer;
+  z-index: 6666;
+}
+.douyin .douyin_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--header-height);
+}
+.douyin .douyin_top img {
+  display: flex;
+  height: 38px;
+}
+.douyin .douyin_bottom {
+  display: none;
+  background: #252633;
+  border: 1px solid #363741;
+  border-radius: 12px;
+  top: calc(var(--header-height) - 10px);
+  width: 166px;
+  padding: 12px 0px;
+}
+.douyin .douyin_bottom .douyin_bottom_list {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 24px;
+  cursor: pointer;
+}
+.douyin .douyin_bottom .douyin_bottom_list .img {
+  display: inline;
+}
+.douyin .douyin_bottom .douyin_bottom_list .imgon {
+  display: none;
+}
+.douyin .douyin_bottom .douyin_bottom_list a {
+  padding-left: 8px;
+  width: 100%;
+}
+.douyin .douyin_bottom .douyin_bottom_list:hover {
+  background: rgba(88, 46, 255, 0.1);
+  color: #B4A1FF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.douyin .douyin_bottom .douyin_bottom_list:hover .img {
+  display: none;
+}
+.douyin .douyin_bottom .douyin_bottom_list:hover .imgon {
+  display: inline;
+}
+
+/* ========== 下载按钮容器 ========== */
+.douyinDownload,
+.douyinDownload2,
+.douyinDownload3 {
+  position: relative;
+  left: 0px;
+  width: auto;
+}
+
+/* ========== 下载按钮通用样式 ========== */
+.douyinDownload .douyinDownload_top,
+.douyinDownload2 .douyinDownload_top,
+.douyinDownload3 .douyinDownload_top,
+.douyinDownload .douyinDownload2_top,
+.douyinDownload2 .douyinDownload2_top,
+.douyinDownload3 .douyinDownload2_top,
+.douyinDownload .douyinDownload3_top,
+.douyinDownload2 .douyinDownload3_top,
+.douyinDownload3 .douyinDownload3_top,
+.douyinDownload .douyinDownload3_top1,
+.douyinDownload2 .douyinDownload3_top1,
+.douyinDownload3 .douyinDownload3_top1,
+.douyinDownload .douyinDownload2_top3,
+.douyinDownload2 .douyinDownload2_top3,
+.douyinDownload3 .douyinDownload2_top3,
+.douyinDownload .douyinDownload4_top,
+.douyinDownload2 .douyinDownload4_top,
+.douyinDownload3 .douyinDownload4_top,
+.douyinDownload .douyinDownload5_top,
+.douyinDownload2 .douyinDownload5_top,
+.douyinDownload3 .douyinDownload5_top,
+.douyinDownload .douyinDownload6_top1,
+.douyinDownload2 .douyinDownload6_top1,
+.douyinDownload3 .douyinDownload6_top1,
+.douyinDownload .douyinDownload2_top7,
+.douyinDownload2 .douyinDownload2_top7,
+.douyinDownload3 .douyinDownload2_top7 {
+  padding: var(--douyin-btn-padding);
+  height: var(--douyin-btn-height);
+  flex-shrink: 0;
+  border-radius: var(--douyin-btn-radius);
+  background: var(--douyin-primary);
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000), var(--douyin-border-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: var(--douyin-btn-font-size);
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.douyinDownload .douyinDownload_top:active,
+.douyinDownload2 .douyinDownload_top:active,
+.douyinDownload3 .douyinDownload_top:active,
+.douyinDownload .douyinDownload2_top:active,
+.douyinDownload2 .douyinDownload2_top:active,
+.douyinDownload3 .douyinDownload2_top:active,
+.douyinDownload .douyinDownload3_top:active,
+.douyinDownload2 .douyinDownload3_top:active,
+.douyinDownload3 .douyinDownload3_top:active,
+.douyinDownload .douyinDownload3_top1:active,
+.douyinDownload2 .douyinDownload3_top1:active,
+.douyinDownload3 .douyinDownload3_top1:active,
+.douyinDownload .douyinDownload2_top3:active,
+.douyinDownload2 .douyinDownload2_top3:active,
+.douyinDownload3 .douyinDownload2_top3:active,
+.douyinDownload .douyinDownload4_top:active,
+.douyinDownload2 .douyinDownload4_top:active,
+.douyinDownload3 .douyinDownload4_top:active,
+.douyinDownload .douyinDownload5_top:active,
+.douyinDownload2 .douyinDownload5_top:active,
+.douyinDownload3 .douyinDownload5_top:active,
+.douyinDownload .douyinDownload6_top1:active,
+.douyinDownload2 .douyinDownload6_top1:active,
+.douyinDownload3 .douyinDownload6_top1:active,
+.douyinDownload .douyinDownload2_top7:active,
+.douyinDownload2 .douyinDownload2_top7:active,
+.douyinDownload3 .douyinDownload2_top7:active {
+  background: var(--douyin-primary-active);
+}
+.douyinDownload .douyinDownload_top span,
+.douyinDownload2 .douyinDownload_top span,
+.douyinDownload3 .douyinDownload_top span,
+.douyinDownload .douyinDownload2_top span,
+.douyinDownload2 .douyinDownload2_top span,
+.douyinDownload3 .douyinDownload2_top span,
+.douyinDownload .douyinDownload3_top span,
+.douyinDownload2 .douyinDownload3_top span,
+.douyinDownload3 .douyinDownload3_top span,
+.douyinDownload .douyinDownload3_top1 span,
+.douyinDownload2 .douyinDownload3_top1 span,
+.douyinDownload3 .douyinDownload3_top1 span,
+.douyinDownload .douyinDownload2_top3 span,
+.douyinDownload2 .douyinDownload2_top3 span,
+.douyinDownload3 .douyinDownload2_top3 span,
+.douyinDownload .douyinDownload4_top span,
+.douyinDownload2 .douyinDownload4_top span,
+.douyinDownload3 .douyinDownload4_top span,
+.douyinDownload .douyinDownload5_top span,
+.douyinDownload2 .douyinDownload5_top span,
+.douyinDownload3 .douyinDownload5_top span,
+.douyinDownload .douyinDownload6_top1 span,
+.douyinDownload2 .douyinDownload6_top1 span,
+.douyinDownload3 .douyinDownload6_top1 span,
+.douyinDownload .douyinDownload2_top7 span,
+.douyinDownload2 .douyinDownload2_top7 span,
+.douyinDownload3 .douyinDownload2_top7 span {
+  padding-left: 4px;
+}
+
+/* 抖音按钮图标垂直居中 */
+.douyinDownload img,
+.douyinDownload2 img,
+.douyinDownload3 img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* ========== 下载按钮下拉菜单 ========== */
+.douyinDownload .douyinDownload_bottom,
+.douyinDownload2 .douyinDownload_bottom,
+.douyinDownload3 .douyinDownload_bottom {
+  position: absolute;
+  display: none;
+  left: 50%;
+  margin-left: -126px;
+  top: 50px;
+  width: 252px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  padding-bottom: 16px;
+  background: #F2F2F2;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+  padding-top: 9px;
+  z-index: 3;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_list,
+.douyinDownload2 .douyinDownload_bottom .douyinDownload_bottom_list,
+.douyinDownload3 .douyinDownload_bottom .douyinDownload_bottom_list {
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-top: 7px;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_list > div,
+.douyinDownload2 .douyinDownload_bottom .douyinDownload_bottom_list > div,
+.douyinDownload3 .douyinDownload_bottom .douyinDownload_bottom_list > div {
+  color: var(--color-text-8, #1D2129);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_list input,
+.douyinDownload2 .douyinDownload_bottom .douyinDownload_bottom_list input,
+.douyinDownload3 .douyinDownload_bottom .douyinDownload_bottom_list input {
+  width: 0;
+  flex: 1;
+  padding: 10px 2px;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--color-text-6, #989A9C);
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn,
+.douyinDownload2 .douyinDownload_bottom .douyinDownload_bottom_btn,
+.douyinDownload3 .douyinDownload_bottom .douyinDownload_bottom_btn {
+  cursor: pointer;
+  margin: auto;
+  border-radius: var(--douyin-btn-radius);
+  margin-top: 16px;
+  background: var(--douyin-primary);
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000), var(--douyin-border-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  width: 220px;
+  height: 32px;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: var(--douyin-btn-font-size);
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn:active,
+.douyinDownload2 .douyinDownload_bottom .douyinDownload_bottom_btn:active,
+.douyinDownload3 .douyinDownload_bottom .douyinDownload_bottom_btn:active {
+  background: var(--douyin-primary-active);
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn span,
+.douyinDownload2 .douyinDownload_bottom .douyinDownload_bottom_btn span,
+.douyinDownload3 .douyinDownload_bottom .douyinDownload_bottom_btn span {
+  padding-left: 4px;
+}
+
+/* ========== 搜索页按钮定位 ========== */
+.douyinDownload2 {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  left: auto;
+  width: 76px;
+  z-index: 99;
+}
+.douyinDownload2 .douyinDownload2_top,
+.douyinDownload2 .douyinDownload2_top3 {
+  width: 76px;
+  height: 31.998px;
+}
+.douyinDownload2 .number {
+  position: absolute;
+  right: 90px;
+  padding: 0px 8px;
+  border-radius: 50%;
+  height: 24px;
+  min-width: 24px;
+  background: #FFF;
+  color: var(--douyin-primary);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 4px;
+}
+
+/* ========== 批量下载按钮定位 ========== */
+.douyinDownload3 {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  left: auto;
+  width: 170px;
+  z-index: 99;
+}
+.douyinDownload3 .douyinDownload3_top1 {
+  width: 76px;
+  height: 31.998px;
+  display: none;
+  float: left;
+}
+.douyinDownload3 .douyinDownload3_top {
+  float: right;
+  width: 76px;
+  height: 31.998px;
+  z-index: 10000000;
+}
+
+/* ========== 隐藏特定区域按钮 ========== */
+.uuWylFaX > div > .douyinDownload2 {
+  display: none !important;
+}
+
+/* ========== 多按钮布局 ========== */
+.douyinDownload7 {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.douyinDownload7 .douyinDownload6_top1,
+.douyinDownload7 .douyinDownload5_top {
+  width: 78px;
+}
+.douyinDownload8 {
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+.douyinDownload8 .douyinDownload6_top1,
+.douyinDownload8 .douyinDownload5_top {
+  width: 78px;
+}
+
+/* ========== 搜索结果隐藏按钮 ========== */
+#search-content-area #waterFallScrollContainer .search-result-card .douyinDownload2,
+#search-content-area #waterFallScrollContainer .search-result-card .douyinDownload3 {
+  display: none !important;
+}
+#search-content-area #waterFallScrollContainer #sliderVideo .douyinDownload2,
+#search-content-area #waterFallScrollContainer #sliderVideo .douyinDownload3 {
+  display: none !important;
+}
+
+/* ========== 详情页下载按钮 ========== */
+.douyinDownload5_top.clickDown {
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+
+/* ========== 用户主页下载按钮 ========== */
+.douyinDownload-user {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  width: auto;
+}
+.douyinDownload-user .number {
+  display: none;
+}
+.douyinDownload-user .douyinDownload2_top7 {
+  padding: var(--douyin-btn-padding);
+  height: var(--douyin-btn-height);
+  border-radius: var(--douyin-btn-radius);
+  background: var(--douyin-primary);
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000), var(--douyin-border-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #FFF;
+  font-family: PingFang SC;
+  font-size: var(--douyin-btn-font-size);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.douyinDownload-user .douyinDownload2_top7 img {
+  vertical-align: middle;
+  display: inline-block;
+}
+.douyinDownload-user .douyinDownload2_top7 span {
+  padding-left: 4px;
+}
+
+/* ========== 精选页下载按钮 ========== */
+.douyinDownload-jingxuan {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
+.douyinDownload-jingxuan .douyinDownload5_top {
+  padding: var(--douyin-btn-padding);
+  height: var(--douyin-btn-height);
+  border-radius: var(--douyin-btn-radius);
+  background: var(--douyin-primary);
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000), var(--douyin-border-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #FFF;
+  font-family: PingFang SC;
+  font-size: var(--douyin-btn-font-size);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload-jingxuan .douyinDownload5_top img {
+  vertical-align: middle;
+  display: inline-block;
+}
+.douyinDownload-jingxuan .douyinDownload5_top span {
+  padding-left: 4px;
+}

@@ -1,0 +1,414 @@
+/**
+ * 小红书平台特有样式
+ * 公共样式已抽离到 common.css
+ */
+
+/* ========== 链接样式重置 ========== */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========== 头部菜单 (DSO100 Logo 下拉菜单) ========== */
+.douyin {
+  width: 140px;
+  height: 44px;
+  position: absolute;
+  right: -140px;
+  top: 0px;
+  float: left;
+  cursor: pointer;
+}
+.douyin .douyin_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+}
+.douyin .douyin_top img {
+  display: flex;
+  height: 38px;
+}
+.douyin .douyin_bottom {
+  display: none;
+  background: rgb(37, 38, 51);
+  border: 1px solid rgb(54, 55, 65);
+  border-radius: 12px;
+  top: 34px;
+  width: 166px;
+  padding: 12px 0px;
+}
+.douyin .douyin_bottom .douyin_bottom_list {
+  cursor: pointer;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 24px;
+}
+.douyin .douyin_bottom .douyin_bottom_list .img {
+  display: inline;
+}
+.douyin .douyin_bottom .douyin_bottom_list .imgon {
+  display: none;
+}
+.douyin .douyin_bottom .douyin_bottom_list a {
+  padding-left: 8px;
+  width: 100%;
+}
+.douyin .douyin_bottom .douyin_bottom_list:hover {
+  background: rgba(88, 46, 255, 0.1);
+  color: #B4A1FF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.douyin .douyin_bottom .douyin_bottom_list:hover .img {
+  display: none;
+}
+.douyin .douyin_bottom .douyin_bottom_list:hover .imgon {
+  display: inline;
+}
+
+/* ========== URL弹窗覆盖 ========== */
+.douyin_alert_url .douyin_alert_url_w .douyin_alert_url_w_t {
+  height: 50px;
+  padding: 0px 20px;
+}
+
+/* ========== 下载按钮容器 ========== */
+.douyinDownload {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  z-index: 200;
+}
+.douyinDownload > div {
+  position: absolute;
+  z-index: 2000000;
+  width: auto;
+  right: 40px;
+  top: 2px;
+  display: flex;
+}
+
+/* ========== 下载按钮 ========== */
+.douyinDownload .douyinDownload_top {
+  margin: 4px;
+  padding: var(--xhs-btn-padding);
+  height: var(--xhs-btn-height);
+  flex-shrink: 0;
+  border-radius: var(--xhs-btn-radius);
+  background: var(--xhs-primary);
+  border: var(--xhs-btn-border);
+  box-shadow: var(--xhs-btn-shadow);
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: var(--xhs-btn-font-size);
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload .douyinDownload_top:hover {
+  background: var(--xhs-primary-hover);
+}
+.douyinDownload .douyinDownload_top:active {
+  background: var(--xhs-primary-active);
+}
+.douyinDownload .douyinDownload_top span {
+  padding-left: 4px;
+}
+.douyinDownload .douyinDownload_top img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* ========== 下载按钮下拉菜单 ========== */
+.douyinDownload .douyinDownload_bottom {
+  position: absolute;
+  display: none;
+  left: 50%;
+  margin-left: -126px;
+  top: 50px;
+  width: 252px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  padding-bottom: 16px;
+  background: #F2F2F2;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+  padding-top: 9px;
+  z-index: 3;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_list {
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-top: 7px;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_list > div {
+  color: var(--color-text-8, #1D2129);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_list input {
+  width: 0;
+  flex: 1;
+  padding: 10px 2px;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--color-text-6, #989A9C);
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn {
+  cursor: pointer;
+  margin: auto;
+  border-radius: var(--xhs-btn-radius);
+  margin-top: 16px;
+  background: var(--xhs-primary);
+  width: 220px;
+  height: 32px;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn:hover {
+  background: var(--xhs-primary-hover);
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn:active {
+  background: var(--xhs-primary-active);
+}
+.douyinDownload .douyinDownload_bottom .douyinDownload_bottom_btn span {
+  padding-left: 4px;
+}
+
+/* ========== 全部下载按钮 ========== */
+.douyinDownloadALL {
+  position: absolute;
+  right: 60px;
+}
+.douyinDownloadDetailALLExcel {
+  position: absolute;
+  right: 200px;
+}
+.bodyHtml {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
+/* ========== 统计数据按钮 ========== */
+.douyinDownloadALLExcel {
+  position: fixed;
+  right: 30px;
+  z-index: 10;
+}
+.douyinDownloadALLExcel2 {
+  position: fixed;
+  right: 130px;
+  z-index: 10;
+}
+.douyinDownload_top_2 {
+  margin: 4px;
+  padding: var(--xhs-btn-padding);
+  height: var(--xhs-btn-height);
+  flex-shrink: 0;
+  border-radius: var(--xhs-btn-radius);
+  background: var(--xhs-primary);
+  border: var(--xhs-btn-border);
+  box-shadow: var(--xhs-btn-shadow);
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: var(--xhs-btn-font-size);
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload_top_2:hover {
+  background: var(--xhs-primary-hover);
+}
+.douyinDownload_top_2:active {
+  background: var(--xhs-primary-active);
+}
+
+/* ========== 评论下载按钮 ========== */
+.douyinDownloadALLPostExcel {
+  position: absolute;
+  right: 10px;
+  top: 70px;
+  z-index: 100;
+}
+.douyinDownload_bottom_post {
+  margin: 4px;
+  padding: var(--xhs-btn-padding);
+  height: var(--xhs-btn-height);
+  flex-shrink: 0;
+  border-radius: var(--xhs-btn-radius);
+  background: var(--xhs-primary);
+  border: var(--xhs-btn-border);
+  box-shadow: var(--xhs-btn-shadow);
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: var(--xhs-btn-font-size);
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload_bottom_post:hover {
+  background: var(--xhs-primary-hover);
+}
+.douyinDownload_bottom_post:active {
+  background: var(--xhs-primary-active);
+}
+
+/* ========== 遮罩Loading ========== */
+.maskLoading {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+
+/* ========== 苹果风格加载动画 ========== */
+.apple-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  z-index: 100000;
+  display: none;
+  font-size: 12px;
+  color: #fff;
+}
+.apple-loading span {
+  margin-top: 5px;
+}
+.apple-loading .spinner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+.more_z {
+  z-index: 1000000;
+}
+
+/* ========== 详情页按钮容器 ========== */
+.douyinDownload2 {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  z-index: 102;
+}
+.douyinDownload2 > div {
+  position: absolute;
+  z-index: 2000000;
+  width: auto;
+  right: 4px;
+  top: 2px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ========== 详情页按钮 ========== */
+.douyinDownload2 .douyinDownload_top3 {
+  margin: 4px;
+  padding: var(--xhs-btn-padding);
+  height: var(--xhs-btn-height);
+  flex-shrink: 0;
+  border-radius: var(--xhs-btn-radius);
+  background: var(--xhs-primary);
+  border: var(--xhs-btn-border);
+  box-shadow: var(--xhs-btn-shadow);
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: var(--xhs-btn-font-size);
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload2 .douyinDownload_top3:hover {
+  background: var(--xhs-primary-hover);
+}
+.douyinDownload2 .douyinDownload_top3:active {
+  background: var(--xhs-primary-active);
+}
+.douyinDownload2 .douyinDownload_top3 span {
+  padding-left: 4px;
+}
+.douyinDownload2 .douyinDownload_top3 img {
+  vertical-align: middle;
+  display: inline-block;
+}
+.douyinDownload2 .space_view {
+  flex-grow: 2;
+}
+.leftBtn {
+  left: 0px;
+}

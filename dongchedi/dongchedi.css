@@ -1,0 +1,40 @@
+.douyinDownload {
+  position: absolute;
+  z-index: 22;
+  width: 80px;
+  top: 10px;
+  right: 10px;
+}
+.douyinDownload .douyinDownload_top {
+  width: 80px;
+  height: 31.998px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #572DFF;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.douyinDownload .douyinDownload_top:active {
+  background: #572dffdb;
+}
+.douyinDownload .douyinDownload_top span {
+  padding-left: 4px;
+}
+.divIframe {
+  width: 10000px;
+  height: 1000px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: -300;
+}

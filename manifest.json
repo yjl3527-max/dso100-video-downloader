@@ -1,0 +1,193 @@
+{
+  "name": "抖音、红薯视频下载-极客",
+  "version": "1.2.4",
+  "description": "DSO100|短视频创作者必备工具，支持抖音、小红书等平台。",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "popup16.png",
+    "32": "popup32.png",
+    "48": "popup48.png",
+    "128": "popup128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "popup16.png",
+      "32": "popup32.png",
+      "48": "popup48.png",
+      "128": "popup128.png"
+    },
+    "default_title": "DSO100|短视频创作者必备工具",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://openapi.dso100.com/*",
+    "https://www.douyin.com/*",
+    "https://www.xiaohongshu.com/*",
+    "https://www.kuaishou.com/*",
+    "https://c.kuaishou.com/*",
+    "https://www.dongchedi.com/*",
+    "https://dso100.com/*",
+    "https://www.dso100.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.kuaishou.com/profile/*"
+      ],
+      "js": [
+        "kuaishou.js",
+        "jquery.min.js",
+        "growl.js",
+        "toast/toast.js"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "toast/toast.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://c.kuaishou.com/fw/user/*"
+      ],
+      "js": [
+        "kuaishouimg.js",
+        "jquery.min.js",
+        "growl.js",
+        "toast/toast.js"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "toast/toast.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.douyin.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "growl.js",
+        "X-Bouds.js",
+        "xiaohongshu/jszip.min.js",
+        "xiaohongshu/FileSaver.min.js",
+        "cookie.js",
+        "douyin/douyin.js",
+        "toast/toast.js"
+      ],
+      "css": [
+        "common.css",
+        "douyin/douyin.css",
+        "douyin/mb.css",
+        "toast/toast.css",
+        "douyin/modal.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.dongchedi.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "growl.js",
+        "X-Bouds.js",
+        "cookie.js",
+        "dongchedi/dongchedi.js",
+        "toast/toast.js"
+      ],
+      "css": [
+        "dongchedi/dongchedi.css",
+        "toast/toast.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://dso100.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "growl.js",
+        "X-Bouds.js",
+        "cookie.js",
+        "dos100/dso100.js",
+        "toast/toast.js"
+      ],
+      "css": [
+        "toast/toast.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.dso100.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "growl.js",
+        "X-Bouds.js",
+        "cookie.js",
+        "dos100/dso100.js",
+        "toast/toast.js"
+      ],
+      "css": [
+        "toast/toast.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.douyin.com/"
+      ],
+      "js": [
+        "jquery.min.js",
+        "growl.js",
+        "X-Bouds.js",
+        "xiaohongshu/jszip.min.js",
+        "xiaohongshu/FileSaver.min.js",
+        "cookie.js",
+        "douyin/douyin.js",
+        "toast/toast.js"
+      ],
+      "css": [
+        "common.css",
+        "douyin/douyin.css",
+        "toast/toast.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.xiaohongshu.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "growl.js",
+        "X-Bouds.js",
+        "cookie.js",
+        "xiaohongshu/html.js",
+        "xiaohongshu/xiaohongshu.js",
+        "xiaohongshu/jszip.min.js",
+        "xiaohongshu/FileSaver.min.js",
+        "toast/toast.js"
+      ],
+      "css": [
+        "common.css",
+        "xiaohongshu/xiaohongshu.css",
+        "xiaohongshu/mb.css",
+        "toast/toast.css",
+        "xiaohongshu/modal.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
